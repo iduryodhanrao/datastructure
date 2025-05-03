@@ -26,3 +26,14 @@ def qsort(arr, start, end):
 def quick_sort(arr):
     qsort(arr, 0, len(arr) - 1)
     return arr
+# quick_sort([3, 6, 8, 10, 1, 2, 1])
+
+# test cases
+
+if __name__ == "__main__":
+    import random
+    arr = [random.randint(0, 100) for _ in range(10)]
+    print("Unsorted array:", arr)
+    sorted_arr = quick_sort(arr)
+    print("Sorted array:", sorted_arr)
+    assert sorted_arr == sorted(arr), "The quick_sort function did not sort the array correctly."
